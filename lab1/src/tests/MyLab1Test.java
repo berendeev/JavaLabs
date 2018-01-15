@@ -1,14 +1,13 @@
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 
 import java.util.HashMap;
 import java.util.Map;
 
-import static junit.framework.TestCase.assertEquals;
+import static junit.framework.Assert.assertEquals;
 
-class MyLab1Test {
-
+public class MyLab1Test {
 	@Test
-	void counting(final Object... testData) {
+	public void counting() throws Exception {
 		MyLab1 test = new MyLab1();
 		String[] testCase = {"One Two Two Three", "One Two Three", "One Two One Three One Two"};
 		Map<String, Integer> resulMap = new HashMap<>();
@@ -30,4 +29,5 @@ class MyLab1Test {
 		resulMap.put("Three", 1);
 		assertEquals(resulMap, test.counting(testCase[2]));
 	}
+
 }
